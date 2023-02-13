@@ -1,5 +1,5 @@
 {% set name = "naiad" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/naiad/naiad/-/archive/{{ version }}/naiad-{{ version }}.tar.gz
-  sha256: f9cbdc51890c7831b2371b0ae37c7325342e24b92bb3d4b9826168e934802772
-  
+  sha256: affe3d2fcdd1005a1c1fc9f3fb18a8334096f79bff4c823f20a17eff3600203c
+
 build:
   script_env:
-   - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
-  script: 
-   - {{ PYTHON }} -m pip install . -vv
+    - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
+  script:
+    - {{ PYTHON }} -m pip install . -vv
   number: 0
   noarch: python
   entry_points:
-   - naiad-create-index = naiad.cli.create:main
-   - naiad-inspect-csv = naiad.cli.csv:main
-   - naiad-search = naiad.cli.search:main
-   - naiad-crossover-search = naiad.cli.crosssearch:main
-   - naiad-register = naiad.cli.storing:main
-   - naiad-inquire = naiad.cli.inquire:main
+    - naiad-create-index = naiad.cli.create:main
+    - naiad-inspect-csv = naiad.cli.csv:main
+    - naiad-search = naiad.cli.search:main
+    - naiad-crossover-search = naiad.cli.crosssearch:main
+    - naiad-register = naiad.cli.storing:main
+    - naiad-inquire = naiad.cli.inquire:main
 
 requirements:
   host:
@@ -43,7 +43,7 @@ requirements:
     - python-dateutil
     - spherical-geometry >=1.2.22
     - naiad-commons
-    
+
 test:
   imports:
     - naiad
