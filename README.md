@@ -1,11 +1,11 @@
-About naiad
-===========
+About naiad-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/naiad-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.ifremer.fr/naiad/naiad
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/naiad-feedstock/blob/main/LICENSE.txt)
 
 Summary: A suite of backend tools in python for indexing, searching and colocating EO data.
 
