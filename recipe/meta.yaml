@@ -1,5 +1,5 @@
 {% set name = "naiad" %}
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/naiad/naiad/-/archive/{{ version }}/naiad-{{ version }}.tar.gz
-  sha256: f0ebf3b9ac6ddb2da0b26b8671eccf435496427f02d02ac9b8090fe167fdc16b
+  sha256: e27c342ee5aa81c98846279bba284ecdf158c49744c7a080ded7c511bd7900eb
 
 build:
   script_env:
