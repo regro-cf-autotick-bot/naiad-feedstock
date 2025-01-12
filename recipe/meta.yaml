@@ -14,7 +14,7 @@ build:
     - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - naiad-create-index = naiad.cli.create:main
@@ -26,7 +26,7 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - wheel
     - setuptools
@@ -35,7 +35,7 @@ requirements:
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - pyyaml >=6.0.0,<6.1
     - pydantic-cli >=4.3.0,<4.4
     - elasticsearch >=7.13.4,<7.14
@@ -45,6 +45,8 @@ requirements:
     - naiad-commons
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - naiad
 
